@@ -6,4 +6,5 @@ A script that displays current directory including hidden files using the long f
 A script that displays current directory, user and group IDS numerically in long format including hidden files (Filename: 5-listfiledigitsonly)
 A script that creates a folder in the /tmp directory (Filename: 6-firstdirectory)
 A script that moves the file /tmp/betty to /tmp/my_first_directory (Filename: 7-movethatfile)
-A script that deleted the file betty from /tmp/my_first_directory (Filename: 8-firstdelete)
+A script that deletes the file betty from /tmp/my_first_directory (Filename: 8-firstdelete)
+A script that deletes the directory /tmp/my_first_directory (Filename: 9-firstdirdeletion)
