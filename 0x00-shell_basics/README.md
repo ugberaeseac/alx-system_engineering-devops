@@ -9,3 +9,4 @@ A script that moves the file /tmp/betty to /tmp/my_first_directory (Filename: 7-
 A script that deletes the file betty from /tmp/my_first_directory (Filename: 8-firstdelete)
 A script that deletes the directory /tmp/my_first_directory (Filename: 9-firstdirdeletion)
 A script that changes the working directory to the previous one (Filename: 10-back)
+A script that lists all files including hidden files in the order working, parent and /boot directory (Filename: 11-lists)
