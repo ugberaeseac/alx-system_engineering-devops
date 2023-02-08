@@ -4,3 +4,4 @@ A script that changes the working directory to the home director (Filename: 2-br
 A script that displays current directory in long format (Filename: 3-listfiles)
 A script that displays current directory including hidden files using the long format (Filename: 4-listmorefiles)
 A script that displays current directory, user and group IDS numerically in long format including hidden files (Filename: 5-listfiledigitsonly)
+A script that creates a folder in the /tmp directory (Filename: 6-firstdirectory)
