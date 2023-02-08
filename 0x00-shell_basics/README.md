@@ -8,3 +8,4 @@ A script that creates a folder in the /tmp directory (Filename: 6-firstdirectory
 A script that moves the file /tmp/betty to /tmp/my_first_directory (Filename: 7-movethatfile)
 A script that deletes the file betty from /tmp/my_first_directory (Filename: 8-firstdelete)
 A script that deletes the directory /tmp/my_first_directory (Filename: 9-firstdirdeletion)
+A script that changes the working directory to the previous one (Filename: 10-back)
