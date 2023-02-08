@@ -11,3 +11,4 @@ A script that deletes the directory /tmp/my_first_directory (Filename: 9-firstdi
 A script that changes the working directory to the previous one (Filename: 10-back)
 A script that lists all files including hidden files in the order working, parent and /boot directory (Filename: 11-lists)
 A script that prints the type of file /tmp/iamfile is (Filename: 12-file_type)
+A script that creates a symbolic link (Filename: 13-symbolic_link)
