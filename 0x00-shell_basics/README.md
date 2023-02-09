@@ -16,3 +16,4 @@ A script that copies all html files that do not exist in or newer than the versi
 A script that moves all files beginning with an upper case (Filename: 100-lets_move)
 A script that deletes all files in the working directory that ends with the character ~ (Filename: 101-clean_emacs)
 A scriot that creates multiple sub-directories in the current directory (Filename: 102-tree)
+A script that list all files in numerical sort seperated by commas and / for directories (Filename: 103-commas)
