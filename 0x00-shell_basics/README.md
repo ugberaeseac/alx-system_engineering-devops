@@ -13,5 +13,6 @@ A script that lists all files including hidden files in the order working, paren
 A script that prints the type of file /tmp/iamfile is (Filename: 12-file_type)
 A script that creates a symbolic link (Filename: 13-symbolic_link)
 A script that copies all html files that do not exist in or newer than the versions in parent directory from working to parent directory (Filename: 14-copy_html)
-A script that moves all files beginning with an upper case (Filename: 10o-lets_move)
-A script that deletes all files in the working directory that ends with the character ~
+A script that moves all files beginning with an upper case (Filename: 100-lets_move)
+A script that deletes all files in the working directory that ends with the character ~ (Filename: 101-clean_emacs)
+A scriot that creates multiple sub-directories in the current directory (Filename: 102-tree)
