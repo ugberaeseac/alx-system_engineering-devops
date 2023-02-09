@@ -8,3 +8,4 @@ Task 6 - adds execute permission to owner and group owner but read only to other
 Task 7 - adds execute permission to owner, group owner and other users
 Task 8 - sets no permission to file owner, group owner but all permission to other users
 Task 9 - sets the permission of the file hello to rwxr-x-wx
+Task 10 - Mirrors the permission of file olleh to the hello file
