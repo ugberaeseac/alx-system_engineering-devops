@@ -9,3 +9,4 @@ Task 7 - adds execute permission to owner, group owner and other users
 Task 8 - sets no permission to file owner, group owner but all permission to other users
 Task 9 - sets the permission of the file hello to rwxr-x-wx
 Task 10 - Mirrors the permission of file olleh to the hello file
+Task 11 - sets execute permission for owner, group owner and others to all subdirectories in the current directory
