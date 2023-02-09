@@ -12,3 +12,7 @@ Task 10 - Mirrors the permission of file olleh to the hello file
 Task 11 - sets execute permission for owner, group owner and others to all subdirectories in the current directory
 Task 12 - create a directory and set mode to 751
 Task 13 - chnages the group owner to school for the file hello
+
+
+
+Task 17 - script that plays star wars in the terminal
