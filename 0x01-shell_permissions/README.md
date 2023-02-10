@@ -13,6 +13,5 @@ Task 11 - sets execute permission for owner, group owner and others to all subdi
 Task 12 - creates a directory and set mode to 751
 Task 13 - script that changes the group owner to school for the file hello
 Task 14 - script that changes the owner and the group owner of files and directory simautaneously
-
-
+Task 15 - script that changes the owner and the group owner of a symbolic link
 Task 17 - script that plays star wars in the terminal
