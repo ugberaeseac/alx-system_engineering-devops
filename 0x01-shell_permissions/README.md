@@ -14,4 +14,5 @@ Task 12 - creates a directory and set mode to 751
 Task 13 - script that changes the group owner to school for the file hello
 Task 14 - script that changes the owner and the group owner of files and directory simautaneously
 Task 15 - script that changes the owner and the group owner of a symbolic link
+Task 16 - script that changes the owner of a file ONLY if it is owned by a particular user (Guilluame)
 Task 17 - script that plays star wars in the terminal
