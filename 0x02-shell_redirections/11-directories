@@ -1,2 +1,2 @@
 #!/bin/bash
-ls - drA |wc -l
+find -midepth 2 type -d |wc -l
