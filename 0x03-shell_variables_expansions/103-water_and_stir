@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(((water#$WATER+stir#$STIR)bestchol#))
+printf "%d\n" echo $(((water#$WATER+stir#$STIR)bestchol#))
