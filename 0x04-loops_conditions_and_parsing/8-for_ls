@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# List the content of a directory is ls format
+# and only the part of the name after the first dash is displayed
+
+LIST="$(ls)"
+for files in $LIST;
+do
+	echo "$files" | cut -d "-" -f2
+done
