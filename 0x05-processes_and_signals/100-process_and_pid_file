@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Bash script that ignores SIGINT but terminates and displays message on SIGTERM
+
+function no_ctrl ()
+{
+	echo "Y U no love me?!"
+}
+
+function _exitmessage ()
+{
+	echo "I hate the kill command"
+}
+
+function _remove_file ()
+{
+	rm -f /var/run/myscript.pid
+	exit
+}
+
+trap "echo 'I hate the kill command'; _remove_file" SIGTERM
+trap "echo 'I hate the kill command'; _remove_file" SIGQUIT
+trap no_ctrl SIGINT
+
+echo $$ >> /var/run/myscript.pid
+
+while true;
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
