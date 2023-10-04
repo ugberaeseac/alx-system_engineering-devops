@@ -3,10 +3,8 @@
 # Configure HAproxy so that it send traffic to web-01 and web-02
 # HAproxy can be managed via an init script and use roundrobin algorithm
 
-sudo apt-get update
-sudo apt-get install --no-install-recommends software-properties-common
-sudo add-apt-repository ppa:vbernat/haproxy-2.6
-sudo apt-get install -y haproxy=2.6.\*
+sudo apt-get -y update
+sudo apt-get -y install haproxy
 
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.orig
 echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
