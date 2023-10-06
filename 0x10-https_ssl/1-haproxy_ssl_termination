@@ -39,14 +39,12 @@ defaults
         option forwardfor
         option http-server-close
 
-frontend myServer-frontend-http
+frontend www-http
         bind *:80
-        reqadd X-Forwarded-Proto:\ http
         default_backend myServer-backend
 
-frontend myServer-frontend-https
-        bind *:443 ssl crt /etc/haprxy/certs/www.tradeafrica.tech.pem
-        reqadd X-Forwarded-Proto:\ https
+frontend www-https
+        bind *:443 ssl crt /etc/haproxy/certs/www.tradeafrica.tech.pem
         default_backend myServer-backend
 
 backend myServer-backend
