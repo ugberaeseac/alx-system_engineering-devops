@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# install the ufw firewall and block all incoming ports
+# except ssh, http and https ports
+
+sudo apt-get -y install ufw
+
+# set to default
+sudo ufw default allow outgoing
+sudo ufw default deny incoming
+
+# Configure ufw so that it blocks all incoming traffic, except the following
+sudo ufw allow ssh
+sudo ufw allow http
+sudo ufw allow https
+
+# Enable and restart
+sudo ufw enable
+sudo service ufw restart
