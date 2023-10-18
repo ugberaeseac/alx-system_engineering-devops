@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# create a new user for thr replica server
+# Grant appropriate permission to replicate primary MySQL server
+# Grant holberton_user SELECT privileges on the mysql.user
+
+sudo mysql -uroot -p -e "CREATE USER IF NOT EXISTS 'replica_user'@'%' IDENTIFIED BY 'Testing101#'"
+sudo mysql -uroot -p -e "GRANT REPLICATION SLAVE ON *.* TO 'replica_user'@'%'"
+sudo mysql -uroot -p -e "GRANT SELECT ON mysql.user TO 'holberton_user'@'localhost'"
+sudo mysql -uroot -p -e "FLUSH PRIVILEGES"
