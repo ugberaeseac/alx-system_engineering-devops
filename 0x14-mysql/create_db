@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# create a database with at least one table and one row
+# in your primary MySQL server (web-01) 
+# Grant user 'holberton_user' SELECT pivilege
+
+sudo mysql -uroot -p -e "CREATE DATABASE IF NOT EXISTS tyrell_corp"
+sudo mysql -uroot -p -e "USE tyrell_corp; CREATE TABLE IF NOT EXISTS nexus6 (id INT, name VARCHAR(256))"
+sudo mysql -uroot -p -e "USE tyrell_corp; INSERT INTO nexus6 VALUES (1, 'Leon')"
+sudo mysql -uroot -p -e "USE tyrell_corp; GRANT SELECT ON tyrell_corp.nexus6 TO 'holberton_user'@'localhost'"
+sudo mysql -uroot -p -e "FLUSH PRIVILEGES"
