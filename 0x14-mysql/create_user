@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# create Create a MySQL user on both web-01 and web-02 servers
+
+sudo mysql -uroot -p -e "CREATE USER IF NOT EXISTS 'holberton_user'@'localhost' IDENTIFIED BY 'projectcorrection280hbtn'"
+sudo mysql -uroot -p -e "GRANT REPLICATION CLIENT ON *.* TO 'holberton_user'@'localhost'"
+sudo mysql -uroot -p -e "FLUSH PRIVILEGES"
