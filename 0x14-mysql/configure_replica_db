@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# configure replica database
+
+CONFIG="\\\nserver-id\t= 2\nlog_bin\t= /var/log/mysql/mysql-bin.log\nrelay-log\t= /var/log/mysql/mysql-relay-bin.log\nbinlog_do_db\t= tyrell_corp\n"
+sudo mysql -uroot -p -e "CREATE DATABASE IF NOT EXISTS tyrell_corp"
+sudo mysql -uroot -p tyrell_corp < /tmp/tyrell_corp.sql
+
+sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf.orig
+sudo sed -i "s/bind-address/#bind-address/" /etc/mysql/mysql.conf.d/mysqld.cnf
+sudo sed -i "\$a $CONFIG" /etc/mysql/mysql.conf.d/mysqld.cnf
+sudo service mysql restart
+
+# Setting and testing replica
+sudo mysql -uroot -p -e "CHANGE MASTER TO MASTER_HOST = '54.242.177.175',MASTER_USER = 'replica_user',MASTER_PASSWORD = 'Testing101#',MASTER_LOG_FILE = 'mysql-bin.000001',MASTER_LOG_POS = 154"
+sudo mysql -uroot -p -e "START SLAVE"

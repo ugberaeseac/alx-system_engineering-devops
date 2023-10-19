@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Dump primry_db
+# unlocked tables after finished dumping and
+# send snapshot file to replica server
+
+sudo mysqldump -uroot -p tyrell_corp > tyrell_corp.sql
+sudo mysql -uroot -p -e "UNLOCK TABLES"
+sudo scp -i "$1" tyrell_corp.sql ubuntu@52.91.148.117:/tmp/

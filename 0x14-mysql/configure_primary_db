@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# configure primary/source database
+
+CONFIG="\\\nserver-id\t= 1\nlog_bin\\\t= /var/log/mysql/mysql-bin.log\nbinlog_do_db\t= tyrell_corp\n"
+
+sudo ufw allow from 52.91.148.117 to any port 3306
+sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf.orig
+sudo sed -i "s/bind-address/#bind-address/" /etc/mysql/mysql.conf.d/mysqld.cnf
+sudo sed -i "\$a $CONFIG" /etc/mysql/mysql.conf.d/mysqld.cnf
+sudo service mysql restart
+
+# Lock source database
+sudo mysql -uroot -p -e "FLUSH TABLES WITH READ LOCK"
+sudo mysql -uroot -p -e "SHOW MASTER STATUS"
