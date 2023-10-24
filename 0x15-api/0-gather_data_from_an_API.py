@@ -7,9 +7,9 @@ accepts an integer as a parameter, which is the employee ID
 """
 
 
+from sys import argv
 import json
 import requests
-from sys import argv
 
 
 def emp_information():
