@@ -7,9 +7,9 @@ accepts an integer as a parameter, which is the employee ID
 """
 
 
-from sys import argv
 import json
 import requests
+from sys import argv
 
 
 def emp_information():
@@ -23,9 +23,9 @@ def emp_information():
     emp_id = int(argv[1])
     users = requests.get('https://jsonplaceholder.typicode.com/users')
 
-    for userd in users.json():
-        if userd.get('id') == emp_id:
-            EMPLOYEE_NAME = userd.get('name')
+    for user in users.json():
+        if user.get('id') == emp_id:
+            EMPLOYEE_NAME = user.get('name')
             break
 
     tasks = requests.get('https://jsonplaceholder.typicode.com/todos')
