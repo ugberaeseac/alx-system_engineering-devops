@@ -35,8 +35,7 @@ def emp_information():
             if task.get('completed') is True:
                 NUMBER_OF_DONE_TASKS += 1
                 TASK_TITLE.append(task.get('title'))
-    print("Employee {} is done with tasks({}/{}):".format(
-                                                          EMPLOYEE_NAME,
+    print("Employee {} is done with tasks({}/{}):".format(EMPLOYEE_NAME,
                                                           NUMBER_OF_DONE_TASKS,
                                                           TOTAL_NUMBER_OF_TASKS
                                                           ))
@@ -45,5 +44,5 @@ def emp_information():
         print("\t {}".format(title))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     emp_information()
