@@ -24,7 +24,8 @@ def recurse(subreddit, hot_list=[], after=""):
     if (len(hot_list) == 0):
         url = "https://api.reddit.com/r/{}/hot".format(subreddit)
     else:
-        url = "https://api.reddit.com/r/{}/hot?after={}".format(subreddit, after)
+        url = "https://api.reddit.com/r/{}/hot?after={}".format(
+                subreddit, after)
     urlRequest = requests.get(url, allow_redirects=False, headers=headers)
 
     if (urlRequest.status_code == 200):
