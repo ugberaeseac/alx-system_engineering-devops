@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-recursive function that queries the Reddit API 
-returns a list containing the titles of all 
+recursive function that queries the Reddit API
+returns a list containing the titles of all
 hot articles for a given subreddit
 Turn OFF redirects
 If not a valid subreddit, return None.
