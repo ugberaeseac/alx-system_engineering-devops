@@ -14,14 +14,17 @@ from sys import argv
 
 def recurse(subreddit, hot_list=[], after=""):
     """
+    connect to the reddit API
     recursively query the reddit API
     """
     if after is None:
         return (hot_list)
 
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-    subreddict = argv[1]
-    url = "https://api.reddit.com/r/{}/hot?after={}".format(subreddit, after)
+    if (len(hot_list) == 0):
+        url = "https://api.reddit.com/r/{}/hot".format(subreddit)
+    else:
+        url = "https://api.reddit.com/r/{}/hot?after={}".format(subreddit, after)
     urlRequest = requests.get(url, allow_redirects=False, headers=headers)
 
     if (urlRequest.status_code == 200):
@@ -33,4 +36,4 @@ def recurse(subreddit, hot_list=[], after=""):
 
     after = response['data']['after']
 
-    return (recurse(subreddict, hot_list, after))
+    return (recurse(subreddit, hot_list, after))
