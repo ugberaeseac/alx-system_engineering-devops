@@ -26,9 +26,10 @@ def recurse(subreddit, hot_list=[], after=""):
 
     if (urlRequest.status_code == 200):
         response = urlRequest.json()
-
-    for child in response['data']['children']:
-        hot_list.append(child['data']['title'])
+        for child in response['data']['children']:
+            hot_list.append(child['data']['title'])
+    else:
+        return None
 
     after = response['data']['after']
 
