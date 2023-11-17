@@ -1,5 +1,7 @@
 # Incident Postmortem: Nginx Server Port Misconfiguration
 
+!(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVJSQpaOZFODIx8oP2uQXs6RrqZ6AJ3zMCTklFotr-qxaIHLJ3_tAY6GLad0S5sVxSn_c&usqp=CAU)
+
 ## Issue Summary
 
 **Duration:**
